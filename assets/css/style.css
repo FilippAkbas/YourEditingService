@@ -554,7 +554,7 @@ ul, ol {
     z-index: 10;
 }
 .s-form form > div img {
-    top: 15%;
+    top: 20px;
 }
 .s-form form input::placeholder,
 .s-form form textarea::placeholder {
