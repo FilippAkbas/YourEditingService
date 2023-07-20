@@ -11,6 +11,10 @@ const ProjectSwiper = new Swiper('.projects-slider', {
             spaceBetween: 40
         },
         1366: {
+            slidesPerView: 3,
+            spaceBetween: 50
+        },
+        1620: {
             slidesPerView: 4,
             spaceBetween: 50
         }
@@ -33,6 +37,10 @@ const priceSwiper = new Swiper('.price-slider', {
             spaceBetween: 40
         },
         1366: {
+            slidesPerView: 3,
+            spaceBetween: 50
+        },
+        1620: {
             slidesPerView: 4,
             spaceBetween: 50
         }

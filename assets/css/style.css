@@ -325,6 +325,7 @@ ul, ol {
 .projects-slider .swiper-slide .img {
     height: 230px;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 .projects-slider .swiper-slide .info {
     display: flex;
