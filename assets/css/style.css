@@ -102,6 +102,7 @@ ul, ol {
 .header__profile {
     display: flex;
     align-items: center;
+    display: none;
 }
 .header__profile .notification {
     width: 24px;
