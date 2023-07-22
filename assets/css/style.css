@@ -25,6 +25,9 @@ ul, ol {
     list-style: none;
     padding: 0;
 }
+p {
+    font-weight: 300;
+}
 .section__title {
     font-size: 50px;
     font-style: normal;
@@ -58,6 +61,41 @@ ul, ol {
     margin: 0 auto;
     padding: 0 15px;
 }
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form label,
+.form > div {
+    position: relative;
+}
+.form label img,
+.form > div img {
+    position: absolute;
+    top: 50%;bottom: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+}
+.form > div img {
+    top: 20px;
+}
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #8096A6;
+}
+.form input,
+.form textarea {
+    position: relative;
+    width: 100%;
+    padding: 10px 20px 10px 50px;
+    color: #002E4E;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
 @media only screen and (min-width: 500px) {
     .container {max-width: 480px;}
 }
@@ -74,6 +112,7 @@ ul, ol {
     .container {max-width: 1620px;}
 }
 
+/* Header section*/
 .header {
     padding: 20px;
 }
@@ -133,6 +172,7 @@ ul, ol {
     margin-left: 10px;
 }
 
+/* Hero section*/
 .s-hero {
     background: url(../img/CTA-banner.png);
     background-repeat: no-repeat;
@@ -173,6 +213,7 @@ ul, ol {
     padding: 20px 20px;
 }
 
+/* Creative section*/
 .s-creative {
     padding: 50px 0;
     margin-bottom: 30px;
@@ -217,6 +258,7 @@ ul, ol {
     font-weight: 400;
 }
 
+/* Create section*/
 .s-create {
     position: relative;
     padding: 50px;
@@ -283,6 +325,7 @@ ul, ol {
     height: 275px;
 }
 
+/* Online section*/
 .s-online {
     padding: 50px;
     margin-bottom: 30px;
@@ -313,6 +356,7 @@ ul, ol {
     padding: 20px;
 }
 
+/* Projects section*/
 .s-projects {
     padding: 50px 0;
     margin-bottom: 30px;
@@ -365,6 +409,7 @@ ul, ol {
     border-color: #008EF2;
 }
 
+/* Price section*/
 .s-price {
     padding: 50px 0;
     margin-bottom: 30px;
@@ -375,46 +420,60 @@ ul, ol {
 .price-slider {
     padding: 30px 0 50px !important;
 }
-.price-slider .swiper-slide {
-    position: relative;
+.price-item {
+    position: relative !important;
     background-color: #fff;
     padding: 22px 20px 0 20px;
     color: #002E4E;
     border-radius: 30px;
-    height: 470px;
-    display: flex;
+    height: 470px !important;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
 }
-.price-slider .swiper-slide .price-box {
+.price-item.dark-item {
+    background-color: #002E4E;
+    color: #fff;
+}
+.price-item .price-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.price-slider .swiper-slide .price-box .title {
+.price-item .price-box .title {
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 36px;
 }
-.price-slider .swiper-slide .price-box .title.populer {
+.price-item .price-box .title.populer,
+.price-item .price-box .title.promotional,
+.price-item .price-box .title.individual {
     position: relative;
     top: -30px;
     left: -25px;
-    background-color: #FF0F57;
     color: #fff;
     padding: 10px 30px;
     border-radius: 0 30px 0 30px;
 }
-.price-slider .swiper-slide .price-box .price {
+.price-item .price-box .title.populer {
+    background-color: #FF0F57;
+}
+.price-item .price-box .title.promotional {
+    background-color: #FFAA0F;
+}
+.price-item .price-box .title.individual {
+    background-color: #00CC8B;
+}
+.price-item .price-box .price {
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 60px;
     text-transform: capitalize;
 }
-.price-slider .swiper-slide .price-box .price .old-price {
+.price-item .price-box .price .old-price {
     color: #FF0F57;
     font-size: 30px;
     font-style: normal;
@@ -423,22 +482,33 @@ ul, ol {
     text-decoration: line-through;
     margin-right: 10px;
 }
-.price-slider .swiper-slide .list {
+.price-item .price-box .price .from {
+    color: #FF0F57;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    margin-right: 10px;
+}
+.price-item .list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 62px;
 }
-.price-slider .swiper-slide .list li {
+.price-item .list li {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.price-slider .swiper-slide .list li img {
+.price-item .list li img {
     width: 24px;
     height: 24px;
 }
-.price-slider .swiper-slide .choise-btn {
+.price-item.dark-item .list li {
+    color: #fff;
+} 
+.price-item .choise-btn {
     background-color: #B5DEFB;
     width: 100%;
     padding: 10px 0;
@@ -449,11 +519,15 @@ ul, ol {
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.price-slider .swiper-slide .choise-btn img {
+.price-item .choise-btn img {
     width: 24px;
     height: 24px;
 }
-.price-slider .swiper-slide .label-btn {
+.price-item.dark-item .choise-btn {
+    background-color: #008EF2;
+    color: #fff;
+}
+.price-item .label-btn {
     display: block;
     padding: 10px;
     text-align: center;
@@ -478,6 +552,7 @@ ul, ol {
     border-color: #008EF2;
 }
 
+/* About section*/
 .s-about {
     padding: 50px 0;
     margin-bottom: 30px;
@@ -486,6 +561,11 @@ ul, ol {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
+}
+.about__left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .about__right .section__title {
     margin-bottom: 30px;
@@ -510,6 +590,7 @@ ul, ol {
     border-radius: 30px;
 }
 
+/* Form section*/
 .s-form {
     padding: 50px 0;
     background: url(../img/form-bg.png);
@@ -535,41 +616,8 @@ ul, ol {
 .s-form .section__title {
     color: #fff;
 }
-.s-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.s-form form label,
-.s-form form > div {
-    position: relative;
-}
-.s-form form label img,
-.s-form form > div img {
-    position: absolute;
-    top: 50%;bottom: 50%;
-    transform: translateY(-50%);
-    left: 15px;
-    width: 24px;
-    height: 24px;
-    z-index: 10;
-}
-.s-form form > div img {
-    top: 20px;
-}
-.s-form form input::placeholder,
-.s-form form textarea::placeholder {
-    color: #8096A6;
-}
-.s-form form input,
-.s-form form textarea {
-    position: relative;
-    width: 100%;
-    padding: 10px 20px 10px 50px;
-    color: #002E4E;
-    border-radius: 10px;
-}
 
+/* Footer section*/
 footer {
     background: #002E4E;
     text-align: center;
@@ -580,4 +628,284 @@ footer .container {
     justify-content: center;
     color: #fff;
     padding: 30px 0;
+}
+
+/* Breadclumb section*/
+.breadclumb {
+    background-image: url(../img/h-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    height: 290px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.breadclumb .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.breadclumb .title {
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: capitalize;
+}
+.breadclumb .dsc {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* Portfolio section*/
+.s-portfolio {}
+
+.s-portfolio .section__title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.portfolio__grid {
+    padding: 50px 0;
+    margin-bottom: 30px;
+}
+.portfolio__grid .item {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+}
+.portfolio__grid--img img {
+    border-radius: 30px;
+    height: 440px;
+    object-fit: cover;
+}
+.portfolio__grid--info .title {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    color: #002E4E;
+    margin-bottom: 30px;
+}
+.portfolio__grid--info .dsc {
+    color: #002E4E;
+    margin-bottom: 30px;
+}
+.portfolio__grid--info .arrow__group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.portfolio__grid--info .arrow__group button {
+    width: 228px;
+    padding: 10px 20px;
+    background-color: #008EF2;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.portfolio__grid--info .swiper {
+    max-width: 700px;
+    margin: 0;
+}
+.portfolio__grid--info .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.portfolio__grid--info .swiper-slide > img {
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.portfolio__grid--info .swiper-slide .play {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 35%;
+    bottom: 50%;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.portfolio__grid--info .swiper-slide .play img {
+    width: 64px;
+    height: 64px;
+}
+
+/* About section*/
+.s-about {
+    padding: 50px 0;
+}
+.s-about .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+}
+.about__img img {
+    height: 600px;
+}
+.about__info .section__title {
+    margin-bottom: 30px;
+}
+.about__info > p {
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+.about__info > p:last-child {
+    margin-bottom: 0;
+}
+
+/* Team Section*/
+.s-team {
+    padding: 50px 0;
+}
+.s-team .section__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.s-team .container > p {
+    text-align: center;
+}
+
+.team__grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+.team__grid .item {
+    position: relative;
+    flex-basis: calc(25% - 50px);
+}
+.team__grid .item img {
+    width: 340px;
+    height: 340px;
+    object-fit: contain;
+    margin-bottom: 14px;
+}
+.team__grid .item .name {
+    position: absolute;
+    right: 0;
+    bottom: 18%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 80px;
+    background: #00CC8B;
+    box-shadow: 0px 4px 44px 0px #00CC8B;
+}
+.team__grid .item .position {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #002E4E;
+    text-align: center;
+}
+
+/* Contact Us section*/
+.s-contact {
+    position: relative;
+    top: -50px;
+}
+.s-contact .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.contact__form {
+    background-color: #fff;
+    padding: 50px 120px;
+    box-shadow: 0px 4px 54px 0px rgba(0, 0, 0, 0.25);
+}
+.contact__form .section__title {
+    margin-bottom: 50px;
+}
+.contact__info {
+    background: #002E4E;
+    box-shadow: 0px 4px 54px 0px rgba(0, 0, 0, 0.25);
+    padding: 50px;
+}
+.contact__info .section__title {
+    margin-bottom: 50px;
+    color: #fff;
+}
+.contact__info .info__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact__info .info__list li a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.contact__info .info__list li a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Price Grid section*/
+.s-price-grid {
+    padding: 50px 0;
+}
+.s-price-grid .section__title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.price__tab--list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.price__tab--list a {
+    padding: 10px 20px;
+    color: #008EF2;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.price__tab--list a.active {
+    background-color: #008EF2;
+    color: #fff;
+}
+.price__grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 50px;
+}
+.price__grid .price-item:nth-child(5) {
+    grid-column: span 2;
+}
+.price__grid .price-item:nth-child(6) {
+    grid-column: span 2;
 }
