@@ -45,6 +45,9 @@
         align-items: center;
         z-index: 101;
     }
+    .header__menu a {
+        font-size: 24px;
+    }
     .s-creative .section__title {
         text-align: left;
     }
