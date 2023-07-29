@@ -178,7 +178,7 @@
 }
 @media only screen and (max-width: 500px) {
     body {
-        font-size: 12px;
+        font-size: 14px;
     }
     .price__tab--list {
         flex-wrap: wrap;
