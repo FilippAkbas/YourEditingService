@@ -166,13 +166,13 @@ const weddingsSwiper = new Swiper('.weddings-slider', {
 });
 
 document.querySelectorAll('.faq-list .item').forEach(item => {
-    console.log(item)
-    let height = item.querySelector('.faq-list__title').clientHeight
+    let height = item.querySelector('.faq-list__title').clientHeight;
+    let oneItem = item.querySelector('.faq-list__title');
 
-    item.onclick = function () {
-        this.classList.toggle('item_active');
+    oneItem.onclick = function () {
+        item.classList.toggle('item_active');
 
-        if(this.classList.contains('item_active')){
+        if(item.classList.contains('item_active')){
             item.querySelector('.faq-list__title button').innerHTML = "-";
         } else {
             item.querySelector('.faq-list__title button').innerHTML = "+";

@@ -335,6 +335,7 @@ p {
 .s-create .container {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
 }
 .s-create::after {
     content: "";
@@ -387,10 +388,6 @@ p {
 .create__right .play img {
     width: 128px;
     height: 128px;
-}
-.create__right img {
-    width: 580px;
-    height: 275px;
 }
 
 /* Online section*/
@@ -744,10 +741,13 @@ p {
     grid-template-columns: repeat(2,1fr);
     grid-gap: 50px;
 }
-.portfolio__grid--img img {
+.portfolio__grid--img picture > img {
     border-radius: 30px;
-    height: 440px;
+    height: 100%;
     object-fit: cover;
+}
+.portfolio__grid--img .video {
+    height: 100%;
 }
 .portfolio__grid--info .title {
     font-size: 30px;
@@ -1092,24 +1092,10 @@ p {
 }
 .faq-list__content ul li {
     position: relative;
+    width: 100%;
+    max-width: 330px;
     height: 190px;
     border-radius: 10px;
-}
-.faq-list__content ul li::after {
-    content: "";
-    position: absolute;
-    top: 50%;bottom: 50%;
-    right: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: block;
-    background: url(../img/icon/play-md.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 64px;
-    width: 64px;
-    cursor: pointer;
-    z-index: 50;
 }
 .faq-list__content ul li iframe {
     height: 100%;
@@ -1202,4 +1188,77 @@ footer {
 .copyright {
     text-align: center;
     color: rgba(255, 255, 255, 0.50);
+}
+
+
+/* Video play */
+
+.video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    border-radius: 20px;
+}
+
+.video__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+.video__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    display: none;
+    padding: 0;
+    width: 68px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.video__button-shape {
+    fill: #212121;
+    fill-opacity: 0.8;
+}
+
+.video__button-icon {
+    fill: #ffffff;
+}
+
+.video__button:focus {
+    outline: none;
+}
+
+.video:hover .video__button-shape,
+.video__button:focus .video__button-shape {
+    fill: #ff0000;
+    fill-opacity: 1;
+}
+
+/* Enabled */
+
+.video--enabled {
+    cursor: pointer;
+}
+
+.video--enabled .video__button {
+    display: block;
 }

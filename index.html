@@ -85,8 +85,16 @@
                 </ul>
             </div>
             <div class="create__right" data-aos="fade-right">
-                <a href="#!" class="play"><img src="./assets/img/icon/play-md.svg" alt="Play icon"></a>
-                <img src="./assets/img/screen.png" alt="Image">
+                <div class="video">
+                    <a class="video__link" href="https://youtu.be/zHvBPwNUBS8">
+                        <picture>
+                            <img class="video__media" src="./assets/img/screen.png" alt="Project video">
+                        </picture>
+                    </a>
+                    <button class="video__button" aria-label="Запустить видео">
+                        <img src="./assets/img/icon/play-md.svg" alt="Play">
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -109,23 +117,68 @@
             <div class="swiper projects-slider" data-aos="fade-up">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="./assets/img/project/project-1.png" alt="Project image" class="img">
+                        <div class="video">
+                            <a class="video__link" href="https://youtu.be/zHvBPwNUBS8">
+                                <picture>
+                                    <img class="video__media" src="./assets/img/project/project-1.png" alt="Project video">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <img src="./assets/img/icon/play-md.svg" alt="Play">
+                            </button>
+                        </div>
                         <h3 class="title">Planning holidays with children</h3>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/img/project/project-2.png" alt="Project image" class="img">
+                        <div class="video">
+                            <a class="video__link" href="https://youtu.be/zHvBPwNUBS8">
+                                <picture>
+                                    <img class="video__media" src="./assets/img/project/project-2.png" alt="Project video">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <img src="./assets/img/icon/play-md.svg" alt="Play">
+                            </button>
+                        </div>
                         <h3 class="title">People rush to book holidays</h3>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/img/project/project-3.png" alt="Project image" class="img">
+                        <div class="video">
+                            <a class="video__link" href="https://youtu.be/zHvBPwNUBS8">
+                                <picture>
+                                    <img class="video__media" src="./assets/img/project/project-3.png" alt="Project video">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <img src="./assets/img/icon/play-md.svg" alt="Play">
+                            </button>
+                        </div>
                         <h3 class="title">Attaining Work-Life Balance and Productivity When</h3>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/img/project/project-4.png" alt="Project image" class="img">
+                        <div class="video">
+                            <a class="video__link" href="https://youtu.be/zHvBPwNUBS8">
+                                <picture>
+                                    <img class="video__media" src="./assets/img/project/project-4.png" alt="Project video">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <img src="./assets/img/icon/play-md.svg" alt="Play">
+                            </button>
+                        </div>
                         <h3 class="title">People rush to book holidays</h3>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./assets/img/project/project-1.png" alt="Project image" class="img">
+                        <div class="video">
+                            <a class="video__link" href="https://youtu.be/zHvBPwNUBS8">
+                                <picture>
+                                    <img class="video__media" src="./assets/img/project/project-1.png" alt="Project video">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Запустить видео">
+                                <img src="./assets/img/icon/play-md.svg" alt="Play">
+                            </button>
+                        </div>
                         <h3 class="title">Planning holidays with children</h3>
                     </div>
                 </div>
@@ -314,6 +367,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.min.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/video.js"></script>
     <script>AOS.init();</script>
     <script>
         let videoPlayer = new Vimeo.Player('hero-video');
