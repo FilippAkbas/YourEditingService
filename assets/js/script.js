@@ -79,11 +79,11 @@ const businessSwiper = new Swiper('.business-slider', {
     spaceBetween: 20,
     breakpoints: {
         100: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 30
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 30
         },
         991: {
@@ -109,11 +109,11 @@ const familySwiper = new Swiper('.family-slider', {
     spaceBetween: 20,
     breakpoints: {
         100: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 30
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 30
         },
         991: {
@@ -139,11 +139,11 @@ const weddingsSwiper = new Swiper('.weddings-slider', {
     spaceBetween: 20,
     breakpoints: {
         100: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 30
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 30
         },
         991: {

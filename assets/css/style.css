@@ -97,8 +97,11 @@ p {
     border-radius: 10px;
     border: 1px solid #000;
 }
+@media only screen and (min-width: 200px) {
+    .container {max-width: 380px;}
+}
 @media only screen and (min-width: 500px) {
-    .container {max-width: 480px;}
+    .container {max-width: 580px;}
 }
 @media only screen and (min-width: 768px) {
     .container {max-width: 740px;}
@@ -195,22 +198,21 @@ p {
 }
 
 .mobile_burger span::after {
-    top: -5px;
+    top: 65%;
 }
 
 .mobile_burger span::before {
-    top: 5px;
+    top: 30%;
 }
 .mobile_burger.active span {
     height: 0;
 }
 .mobile_burger.active span::after {
-    top: 0;
     transform: rotate(45deg);
 }
 
 .mobile_burger.active span::before {
-    top: 0;
+    top: 65%;
     transform: rotate(-45deg);
 }
 
@@ -790,15 +792,17 @@ p {
     position: relative;
 }
 .portfolio__grid--info .swiper-slide > img {
-    height: 170px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
+    padding-bottom: 56.25%;
 }
 .portfolio__grid--info .swiper-slide .play {
     width: 64px;
     height: 64px;
     position: absolute;
-    top: 35%;
+    top: 12%;
     bottom: 50%;
     right: 50%;
     left: 50%;
@@ -967,6 +971,7 @@ p {
     grid-gap: 50px;
 }
 .price__grid.big-item {
+    grid-template-columns: repeat(2,1fr);
     margin-top: 30px;
 }
 .price__grid .price-item:nth-child(5) {

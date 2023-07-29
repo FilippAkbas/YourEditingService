@@ -1,3 +1,8 @@
+@media only screen and (max-width: 1920px) {
+    .price__grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
 @media only screen and (max-width: 1440px) {
     .price__grid {
         grid-template-columns: repeat(3,1fr);
@@ -10,15 +15,19 @@
     }
 }
 @media only screen and (max-width: 1336px) {
-    .portfolio__grid .item {
-        grid-template-columns: 1fr;
+    .price__grid {
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media only screen and (max-width: 991px) {
     .mobile_burger {
         position: relative;
         display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 105;
+        width: 70px;
+        height: 40px;
     }
     .header__menu {
         display: none;
@@ -118,9 +127,6 @@
     .price__grid {
         grid-template-columns: 1fr 1fr;
     }
-    .price-item {
-        height: 100% !important;
-    }
     .price__grid.big-item {
         grid-template-columns: 1fr;
     }
@@ -142,8 +148,29 @@
         width: 64px;
         height: 64px;
     }
+    .team__grid .item img {
+        width: 240px;
+        height: 240px;
+    }
+    .team__grid .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 768px) {
     .portfolio__grid--info .swiper {
-        max-width: 500px;
+        max-width: 600px;
+    }
+    .portfolio__grid--info .swiper-slide {
+        max-height: 200px;
+        align-items: start;
+    }
+    .portfolio__grid--info .swiper-slide .play {
+        top: 24%;
+    }
+    .price__grid {
+        grid-template-columns: 1fr;
     }
 }
 @media only screen and (max-width: 500px) {
