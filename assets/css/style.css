@@ -450,10 +450,10 @@ p {
     margin-bottom: 15px;
 }
 .projects-slider .swiper-slide .title {
-    font-size: 18px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 36px;
     color: #002E4E;
 }
 .projects-slider .swiper-pagination {
