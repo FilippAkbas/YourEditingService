@@ -6,18 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Editing Service</title>
     <link rel="stylesheet" href="./assets/font/cera-pro.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
 </head>
 <body>
 
     <header class="header">
         <div class="container">
-            <a href="/" class="header__logo"><img src="./assets/img/icon/logo.png" alt="Logo"></a>
+            <a href="/" class="header__logo">
+                <picture>
+                    <source media="(max-width: 500px)" srcset="./assets/img/icon/mobile-logo.png">
+                    <img src="./assets/img/icon/logo.png" alt="Logo">
+                </picture>
+            </a>
             <nav class="header__menu">
                 <a href="/" class="link">Home</a>
                 <a href="./price.html" class="link">Price</a>
-                <a href="#!" class="link">Projects</a>
                 <a href="./portfolio.html" class="link">Portfolio</a>
                 <a href="./about.html" class="link">Abous Us</a>
                 <a href="./contact.html" class="link">Contacts</a>
@@ -25,6 +31,9 @@
             <div class="header__profile">
                 <a href="#!" class="notification"><img src="./assets/img/icon/notification.svg" alt="notification icon"></a>
                 <a href="#!" class="avatar"><img src="./assets/img/avatar.png" alt="Avatar image"> Profile <img src="./assets/img/icon/down.svg" alt="Down arrow"></a>
+            </div>
+            <div class="mobile_burger">
+                <span></span>
             </div>
         </div>
     </header>
@@ -97,11 +106,48 @@
     </section>
 
     <footer>
-        <div class="container">Copyright © 2023</div>
+        <div class="container footer-top">
+            <div class="footer__logo"><img src="./assets/img/icon/logo.png" alt="Logo"></div>
+            <nav class="footer__menu">
+                <a href="/" class="link">Home</a>
+                <a href="./price.html" class="link">Price</a>
+                <a href="./portfolio.html" class="link">Portfolio</a>
+                <a href="./about.html" class="link">Abous Us</a>
+                <a href="./contact.html" class="link">Contacts</a>
+            </nav>
+        </div>
+        <div class="container footer-middle">
+            <ul class="social__list">
+                <li>
+                    <a href="tel: (800) 100-200-300">
+                        <img src="./assets/img/icon/tel-grey.svg" alt="Contact Icon">
+                        (800) 100-200-300
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto: yes_info@gmail.com">
+                        <img src="./assets/img/icon/mail-grey.svg" alt="Contact Icon">
+                        yes_info@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://goo.gl/maps/GMDtwxG7EeWXxr776" target="_blank">
+                        <img src="./assets/img/icon/address-grey.svg" alt="Contact Icon">
+                        135 Jefferson Ave, Elizabeth, NJ 07201, USA
+                    </a>
+                </li>
+            </ul>
+            <div class="privacy__list">
+                <a href="./privacy.html" class="link">Privacy policy</a>
+                <a href="./payment.html" class="link">Payment method</a>
+            </div>
+        </div>
+        <div class="container copyright">Copyright © 2023</div>
     </footer>
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.min.js"></script>
+    <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

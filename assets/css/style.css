@@ -171,24 +171,89 @@ p {
     height: 24px;
     margin-left: 10px;
 }
+.mobile_burger {
+    display: none;
+    position: relative;
+}
+
+.mobile_burger span {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.mobile_burger span::after,
+.mobile_burger span::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.mobile_burger span::after {
+    top: -5px;
+}
+
+.mobile_burger span::before {
+    top: 5px;
+}
+.mobile_burger.active span {
+    height: 0;
+}
+.mobile_burger.active span::after {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.mobile_burger.active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
 
 /* Hero section*/
 .s-hero {
-    background: url(../img/CTA-banner.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    position: relative;
     width: 100%;
     height: 650px;
     margin-bottom: 30px;
 }
+.s-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(68,78,115,0.9) 20%, rgba(93,82,117,0.7) 50%, rgba(53,45,65,0.9) 80%);
+    z-index: 10;
+}
+.s-hero .video__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+.s-hero .video__bg iframe {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
 .s-hero .container {
+    position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
+    z-index: 100;
 }
 .hero__title {
     color: #FFF;
@@ -261,7 +326,7 @@ p {
 /* Create section*/
 .s-create {
     position: relative;
-    padding: 50px;
+    padding: 50px 0;
     margin-bottom: 30px;
 }
 .s-create .container {
@@ -327,11 +392,11 @@ p {
 
 /* Online section*/
 .s-online {
-    padding: 50px;
+    padding: 50px 0;
     margin-bottom: 30px;
     width: 100%;
     height: 650px;
-    background: url(../img/banner.png);
+    background: url(../img/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 100%;
@@ -430,10 +495,7 @@ p {
     display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-}
-.price-item.dark-item {
-    background-color: #002E4E;
-    color: #fff;
+    transition: all .4s;
 }
 .price-item .price-box {
     display: flex;
@@ -500,14 +562,12 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: all .4s;
 }
 .price-item .list li img {
     width: 24px;
     height: 24px;
 }
-.price-item.dark-item .list li {
-    color: #fff;
-} 
 .price-item .choise-btn {
     background-color: #B5DEFB;
     width: 100%;
@@ -518,14 +578,15 @@ p {
     gap: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    transition: all .4s;
+}
+.price-item .choise-btn svg {
+    fill: #008EF2;
+    transition: all .4s;
 }
 .price-item .choise-btn img {
     width: 24px;
     height: 24px;
-}
-.price-item.dark-item .choise-btn {
-    background-color: #008EF2;
-    color: #fff;
 }
 .price-item .label-btn {
     display: block;
@@ -533,6 +594,20 @@ p {
     text-align: center;
     color: #008EF2;
 }
+.price-item:hover {
+    background-color: #002E4E;
+    color: #fff;
+}
+.price-item:hover .choise-btn {
+    background-color: #008EF2;
+    color: #fff;
+}
+.price-item:hover .choise-btn svg {
+    fill: #fff;
+}
+.price-item:hover .list li {
+    color: #fff;
+} 
 .price-slider .swiper-pagination {
     display: flex;
     justify-content: center;
@@ -615,19 +690,6 @@ p {
 }
 .s-form .section__title {
     color: #fff;
-}
-
-/* Footer section*/
-footer {
-    background: #002E4E;
-    text-align: center;
-}
-footer .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    padding: 30px 0;
 }
 
 /* Breadclumb section*/
@@ -903,9 +965,235 @@ footer .container {
     grid-template-columns: repeat(4,1fr);
     grid-gap: 50px;
 }
+.price__grid.big-item {
+    margin-top: 30px;
+}
 .price__grid .price-item:nth-child(5) {
     grid-column: span 2;
 }
 .price__grid .price-item:nth-child(6) {
     grid-column: span 2;
+}
+
+/* Price Grid section*/
+.s-faq {
+    position: relative;
+    padding: 50px 0;
+    background: url(../img/bg-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.s-faq::after {
+    content: "";
+    position: absolute;
+    background: #002E4E;
+    top: 0;bottom: 0;
+    left: 0;right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: .8;
+}
+.s-faq .container {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+}
+.s-faq .section__title {
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+}
+.faq-list .item {
+    padding: 10px 8px;
+    overflow: hidden;
+}
+.faq-list .item .faq-list__content {
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    transition: all .5s;
+}
+.faq-list .item.item_active .faq-list__content {
+    padding: 40px 0 0 70px;
+    height: 100%;
+    opacity: 1;
+}
+.faq-list__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #fff;
+    margin: 10px 0;
+    padding: 0 0 10px 0;
+    cursor: pointer;
+}
+.faq-list__title .number-title {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.faq-list__title .number {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    padding: 10px;
+}
+.faq-list__title h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+}
+.faq-list__title button {
+    max-width: 44px;
+    max-height: 44px;
+    background: #001422;
+    flex-basis: 20%;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+.faq-list__content {
+    padding: 40px 0 0 70px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #fff;
+}
+.faq-list__content p {
+    margin-bottom: 20px;
+}
+.faq-list__content ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+.faq-list__content ul li {
+    position: relative;
+    height: 190px;
+    border-radius: 10px;
+}
+.faq-list__content ul li::after {
+    content: "";
+    position: absolute;
+    top: 50%;bottom: 50%;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    background: url(../img/icon/play-md.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 64px;
+    width: 64px;
+    cursor: pointer;
+    z-index: 50;
+}
+.faq-list__content ul li iframe {
+    height: 100%;
+}
+
+.s-seo-text {
+    padding: 50px 0;
+}
+.s-seo-text p {
+    margin: 0;
+}
+
+
+/* Footer section*/
+footer {
+    background: #002E4E;
+    padding: 20px 0;
+}
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.footer__logo {
+    width: 100%;
+    max-width: 228px;
+    height: 100%;
+    max-height: 30px;
+    object-fit: contain;
+}
+.footer__menu {
+    display: flex;
+    align-items: center;
+}
+.footer__menu a {
+    position: relative;
+    display: block;
+    padding: 25px 10px;
+    color: #fff;
+    font-weight: 400;
+}
+.footer__menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 5px);
+    height: 0;
+    background-color: #fff;
+    opacity: 0;
+    transition: all .4s;
+}
+.footer__menu a:hover::after {
+    opacity: 1;
+    height: 1px;
+}
+.footer-middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.social__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.social__list a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+.social__list a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+.privacy__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.privacy__list a {
+    color: #008EF2;
+    text-decoration: underline;
+}
+.copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.50);
 }

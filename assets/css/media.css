@@ -1,0 +1,210 @@
+@media only screen and (max-width: 1440px) {
+    .price__grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .price__grid .price-item:nth-child(5) {
+        grid-column: auto;
+    }
+    .price__grid .price-item:last-child {
+        grid-column: auto;
+    }
+}
+@media only screen and (max-width: 991px) {
+
+}
+@media only screen and (max-width: 768px) {
+    .mobile_burger {
+        display: flex;
+    }
+    .header__menu {
+        display: none;
+    }
+    .header__menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .s-creative .section__title {
+        text-align: left;
+    }
+    .s-creative .dsc {
+        text-align: left;
+    }
+    .creative__list {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+    .creative__list .item {
+        border-radius: 0;
+    }
+    .s-create .container {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+    .create__left .section__title {
+        text-align: center;
+    }
+    .s-online {
+        background-position: 50%;
+    }
+    .s-about .container {
+        grid-template-columns: 1fr;
+    }
+    .about__right .section__title {
+        text-align: center;
+    }
+    .about__left {
+        order: 2;
+    }
+    .s-form {
+        height: 100%;
+    }
+    .s-form .container {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+    .footer-top {
+        justify-content: center;
+    }
+    .footer__menu {
+        display: none;
+    }
+    .footer-middle {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .social__list {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .about__img {
+        display: none;
+    }
+    .team__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .s-contact {
+        top: -30px;
+    }
+    .s-contact .container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
+    }
+    .contact__info .section__title {
+        text-align: center;
+    }
+    .contact__info .info__list li a {
+        justify-content: center;
+    }
+    .portfolio__grid .item {
+        grid-template-columns: 1fr;
+    }
+    .price__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .price-item {
+        height: 100% !important;
+    }
+    .price__grid.big-item {
+        grid-template-columns: 1fr;
+    }
+    .faq-list__title .number-title {
+        flex-basis: 80%;
+    }
+    .faq-list__content ul {
+        flex-wrap: wrap;
+    }
+    .create__right img {
+        width: 100%;
+        height: 100%;
+    }
+    .create__right .play img {
+        width: 64px;
+        height: 64px;
+    }
+    .create__right .play {
+        width: 64px;
+        height: 64px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+    .price__tab--list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section__title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .about__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact__form {
+        padding: 20px;
+    }
+    .contact__info {
+        padding: 20px;
+    }
+    .header__logo img {
+        width: 40px;
+        height: 40px;
+    }
+    .faq-list .item.item_active .faq-list__content {
+        padding: 20px 0 0 10px;
+    }
+    .price-item {
+        padding: 10px;
+    }
+    .price-item .price-box .price {
+        font-size: 32px;
+    }
+    .price-item .price-box .title {
+        font-size: 24px;
+        padding: 0;
+    }
+    .price__grid {
+        grid-template-columns: 1fr;
+    }
+    .price-item .price-box .title.populer, .price-item .price-box .title.promotional, .price-item .price-box .title.individual {
+        top: 0;
+        left: 0;
+        padding: 0;
+        background: transparent;
+    }
+    .price-item .price-box .title.populer {
+        color: #FF0F57;
+    }
+    .price-item .price-box .title.promotional {
+        color: #FFAA0F;
+    }
+    .price-item .price-box .title.individual {
+        color: #00CC8B;
+    }
+    .team__grid {
+        grid-template-columns: 1fr;
+    }
+    .portfolio__grid--img img {
+        max-width: 350px;
+        height: 100%;
+    }
+    .portfolio__grid--info .arrow__group button {
+        max-width: 150px;
+    }
+    .portfolio__grid--info .swiper {
+        max-width: 350px;
+    }
+}
