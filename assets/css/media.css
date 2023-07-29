@@ -245,4 +245,7 @@
     .portfolio__grid--info .swiper {
         max-width: 350px;
     }
+    .faq-list__title .number {
+        display: none;
+    }
 }
