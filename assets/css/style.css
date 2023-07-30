@@ -241,6 +241,7 @@ p {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
+    object-fit: cover;
 }
 .s-hero .video__bg iframe {
     width: 100%;

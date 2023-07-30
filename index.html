@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media.css">
-    <script src="https://player.vimeo.com/api/player.js"></script>
 </head>
 <body>
 
@@ -40,7 +39,9 @@
     </header>
 
     <section class="s-hero">
-        <div class="video__bg" id="hero-video" data-vimeo-id="478067757" data-vimeo-background="true"></div>
+        <video autoplay loop muted controls="" class="video__bg">
+            <source src="./assets/img/videoplayback.mp4" type="video/mp4">
+        </video>
         <div class="container">
             <h1 class="hero__title" data-aos="fade-down">Online Video Editor For Your Business.</h1>
             <p class="hero__dsc" data-aos="fade-down">Pitchy is the first video maker based on pre-designed video templates <br> allowing you to make corporate videos on your own. Become a video creator!</p>
@@ -369,11 +370,5 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/video.js"></script>
     <script>AOS.init({disable: 'mobile'});</script>
-    <script>
-        let videoPlayer = new Vimeo.Player('hero-video');
-        videoPlayer.on('play', function() {
-            console.log('Played the video');
-        });
-    </script>
 </body>
 </html>
