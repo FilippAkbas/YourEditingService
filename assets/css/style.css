@@ -1075,6 +1075,10 @@ p {
     cursor: pointer;
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 44px;
 }
 .faq-list__content {
     padding: 40px 0 0 70px;
