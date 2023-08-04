@@ -18,6 +18,15 @@
     .price__grid {
         grid-template-columns: repeat(2,1fr);
     }
+    .creative__list {
+        grid-gap: 25px;
+    }
+    .creative__list .item {
+        padding: 15px;
+    }
+    .portfolio__grid .item {
+        grid-template-columns: 1fr;
+    }
 }
 @media only screen and (max-width: 991px) {
     .mobile_burger {
@@ -124,9 +133,6 @@
     .contact__info .info__list li a {
         justify-content: center;
     }
-    .portfolio__grid .item {
-        grid-template-columns: 1fr;
-    }
     .price__grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -163,7 +169,7 @@
 }
 @media only screen and (max-width: 768px) {
     .portfolio__grid--info .swiper {
-        max-width: 600px;
+        max-width: 500px;
     }
     .portfolio__grid--info .swiper-slide {
         max-height: 200px;

@@ -37,8 +37,9 @@ const ProjectSwiper = new Swiper('.projects-slider', {
     },
         // If we need pagination
         pagination: {
-        el: '.swiper-pagination',
-    },
+            el: '.projects-pagination',
+            clickable: true,
+        },
 });
 const priceSwiper = new Swiper('.price-slider', {
     slidesPerView: 4,
@@ -72,6 +73,7 @@ const priceSwiper = new Swiper('.price-slider', {
         // If we need pagination
         pagination: {
         el: '.swiper-pagination',
+        clickable: true,
     },
 });
 const businessSwiper = new Swiper('.business-slider', {
