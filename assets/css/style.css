@@ -1006,6 +1006,15 @@ p {
 .price__grid .price-item:nth-child(6) {
     grid-column: span 2;
 }
+.price__slider {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 50px;
+}
+.small-price-pagination {
+    margin-top: 30px;
+    text-align: center;
+}
 
 /* Price Grid section*/
 .s-faq {

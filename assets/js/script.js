@@ -71,7 +71,7 @@ const priceSwiper = new Swiper('.price-slider', {
         }
     },
         // If we need pagination
-        pagination: {
+    pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
@@ -166,6 +166,34 @@ const weddingsSwiper = new Swiper('.weddings-slider', {
         prevEl: '.weddings-button-prev',
     },
 });
+if(window.innerWidth < 1800 ) {
+    const smallPriceSwiper = new Swiper('.small-price-slider', {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        breakpoints: {
+            100: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1620: {
+                slidesPerView: 3,
+                spaceBetween: 50
+            }
+        },
+        pagination: {
+            el: '.small-price-pagination',
+            clickable: true,
+        },
+    });
+}
 
 document.querySelectorAll('.faq-list .item').forEach(item => {
     let height = item.querySelector('.faq-list__title').clientHeight;
