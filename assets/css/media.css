@@ -19,6 +19,9 @@
     .price__grid .price-item:last-child {
         grid-column: auto;
     }
+    .create__right::after {
+        display: none;
+    }
 }
 @media only screen and (max-width: 1336px) {
     .price__grid {
@@ -59,9 +62,10 @@
         justify-content: center;
         align-items: center;
         z-index: 101;
+        grid-gap: 90px;
     }
     .header__menu a {
-        font-size: 24px;
+        font-size: 50px;
     }
     .s-creative .section__title {
         text-align: left;
@@ -186,6 +190,12 @@
     }
     .price__grid {
         grid-template-columns: 1fr;
+    }
+    .header__menu.active {
+        grid-gap: 30px;
+    }
+    .header__menu a {
+        font-size: 32px;
     }
 }
 @media only screen and (max-width: 500px) {
