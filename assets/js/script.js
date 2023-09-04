@@ -105,6 +105,10 @@ const businessSwiper = new Swiper('.business-slider', {
         nextEl: '.business-button-next',
         prevEl: '.business-button-prev',
     },
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    // },
 });
 const familySwiper = new Swiper('.family-slider', {
     slidesPerView: 3,

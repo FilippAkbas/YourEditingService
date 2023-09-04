@@ -208,6 +208,25 @@
     .header__menu a {
         font-size: 32px;
     }
+    .arrow__group {
+        display: none !important;
+    }
+    .portfolio__grid--info .swiper {
+        display: none;
+    }
+    .portfolio__grid {
+        margin-bottom: 0;
+        padding: 30px 0;
+    }
+    .s-portfolio .section__title {
+        margin-bottom: 0;
+    }
+    .contact__form .section__title {
+        margin-bottom: 20px;
+    }
+    .contact__form {
+        padding: 50px 20px 20px 20px;
+    }
 }
 @media only screen and (max-width: 500px) {
     body {
@@ -223,9 +242,6 @@
     }
     .about__grid {
         grid-template-columns: 1fr 1fr;
-    }
-    .contact__form {
-        padding: 20px;
     }
     .contact__info {
         padding: 20px;

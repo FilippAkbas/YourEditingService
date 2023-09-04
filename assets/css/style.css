@@ -811,6 +811,11 @@ p {
 .portfolio__grid--img .video {
     height: 100%;
 }
+.portfolio__grid--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .portfolio__grid--info .title {
     font-size: 30px;
     font-style: normal;
@@ -1071,7 +1076,8 @@ p {
     width: 100%;
     height: 100%;
     z-index: 0;
-    opacity: .75;
+    opacity: .90;
+    mix-blend-mode: multiply;
 }
 .s-faq .container {
     position: relative;
@@ -1102,6 +1108,10 @@ p {
     padding: 40px 0 0 70px;
     height: 100%;
     opacity: 1;
+}
+.faq-list .item.item_active .faq-list__title > button {
+    background-color: #fff;
+    color: #000;
 }
 .faq-list__title {
     display: flex;
