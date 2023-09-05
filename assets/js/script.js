@@ -187,6 +187,14 @@ if(window.innerWidth < 1800 ) {
                 slidesPerView: 3,
                 spaceBetween: 20
             },
+            1100: {
+                slidesPerView: 2,
+                spaceBetween: 50
+            },
+            1400: {
+                slidesPerView: 3,
+                spaceBetween: 50
+            },
             1620: {
                 slidesPerView: 3,
                 spaceBetween: 50
@@ -207,9 +215,9 @@ document.querySelectorAll('.faq-list .item').forEach(item => {
         item.classList.toggle('item_active');
 
         if(item.classList.contains('item_active')){
-            item.querySelector('.faq-list__title button').innerHTML = "-";
+            item.querySelector('.faq-list__title button img').src = "./assets/img/icon/minus.svg";
         } else {
-            item.querySelector('.faq-list__title button').innerHTML = "+";
+            item.querySelector('.faq-list__title button img').src = "./assets/img/icon/plus.svg";
         }
     }
 })
