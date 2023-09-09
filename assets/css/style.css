@@ -1061,7 +1061,7 @@ p {
 .s-faq {
     position: relative;
     padding: 50px 0;
-    background: url(../img/bg-img.png);
+    background: url(../img/faq-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -1078,6 +1078,7 @@ p {
     z-index: 0;
     opacity: .90;
     mix-blend-mode: multiply;
+    display: none;
 }
 .s-faq .container {
     position: relative;
@@ -1097,6 +1098,7 @@ p {
 .faq-list .item {
     padding: 10px 8px;
     overflow: hidden;
+    border-bottom: 2px solid #FFFFFF1A;
 }
 .faq-list .item .faq-list__content {
     height: 0;
@@ -1117,7 +1119,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #fff;
     margin: 10px 0;
     padding: 0 0 10px 0;
     cursor: pointer;
